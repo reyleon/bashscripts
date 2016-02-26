@@ -3,14 +3,14 @@
 # author: reyleon
 # date: 2015/12/08
 
+cwd=$(cd $(dirname $0); pwd)
+yum -y install epel-release gcc gcc-c++
+
 printout=${0}.$(date "+%Y%m%d%H%M%S").log
 fifofile=${$}.fifo
 mkfifo $fifofile;cat $fifofile | tee $printout &
 exec 1>$fifofile
 exec 2>&1
-
-cwd=$(cd $(dirname $0); pwd)
-yum -y install epel-release gcc gcc-c++
 
 nginx_install_func() {
 # --*-- NGINX 安装 BEGIN --*--
@@ -167,5 +167,6 @@ nginx_install_func
 mysql_install_func
 php_install_func
 
-echo "finish"
-sleep 2;rm -f $fifofile
+cd $cwd && rm -f $fifofile
+echo "Finish: $SECONDS s"
+
