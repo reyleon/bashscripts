@@ -49,7 +49,8 @@ fi
 mysql_install_func()
 {
 # --*--   MYSQL 安装 BEGIN --*--
-# 参考页面,MySQL Source-Configuration Options: # http://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html
+# 参考页面,MySQL Source-Configuration Options:
+# http://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html
 
 mysql_version=5.6.27
 mysql_installprefix=/usr/local/mysql
@@ -138,7 +139,6 @@ cd php-${php_version} && \
 --enable-cgi \
 --enable-fpm \
 --enable-ftp \
---enable-mbstring \
 --enable-pcntl \
 --enable-shmop \
 --enable-soap \
