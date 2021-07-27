@@ -1,6 +1,4 @@
 #!/bin/bash
-# author : reyleon
-# date   : 2015/12/09
 
 redis_version=3.0.5
 rm -rf redis-${redis_version// /}
@@ -21,7 +19,7 @@ fi
 
 [ -f "src/redis-trib.rb" ] && cp src/redis-trib.rb /usr/local/bin/
 cd utils
-if [ -f "install_server.sh" ];then 
+if [ -f "install_server.sh" ];then
     sh install_server.sh
     exit $?
 fi
