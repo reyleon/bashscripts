@@ -3,13 +3,13 @@
 
 install_subversion() {
 
-    echo '[WandiscoSVN]
+  echo '[WandiscoSVN]
 name=Wandisco SVN Repo
 baseurl=http://opensource.wandisco.com/centos/7/svn-1.14/RPMS/$basearch/
 enabled=1
 gpgcheck=0
 ' > /etc/yum.repos.d/wandisco-svn.repo
 
-    yum -y install subversion
+  yum -y install subversion
 
 }

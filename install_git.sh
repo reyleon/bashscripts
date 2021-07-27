@@ -18,21 +18,7 @@ install_git() {
   # yum repo-pkgs ius list | grep git
   # ...
   # git224.x86_64                                 2.24.4-1.el7.ius               ius
-  # git224-all.noarch                             2.24.4-1.el7.ius               ius
-  # git224-core.x86_64                            2.24.4-1.el7.ius               ius
-  # git224-core-doc.noarch                        2.24.4-1.el7.ius               ius
-  # git224-cvs.noarch                             2.24.4-1.el7.ius               ius
-  # git224-daemon.x86_64                          2.24.4-1.el7.ius               ius
-  # git224-email.noarch                           2.24.4-1.el7.ius               ius
-  # git224-gitk.noarch                            2.24.4-1.el7.ius               ius
-  # git224-gitweb.noarch                          2.24.4-1.el7.ius               ius
-  # git224-gui.noarch                             2.24.4-1.el7.ius               ius
-  # git224-instaweb.noarch                        2.24.4-1.el7.ius               ius
-  # git224-p4.noarch                              2.24.4-1.el7.ius               ius
-  # git224-perl-Git.noarch                        2.24.4-1.el7.ius               ius
-  # git224-perl-Git-SVN.noarch                    2.24.4-1.el7.ius               ius
-  # git224-subtree.x86_64                         2.24.4-1.el7.ius               ius
-  # git224-svn.noarch                             2.24.4-1.el7.ius               ius
+  # ...
   yum -y install git224
 
 }
