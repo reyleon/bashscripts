@@ -1,18 +1,11 @@
 install_proxychains() {
-    if [ -z "$PACKAGE_PATH" ];then
-        echo "没有设置 PACKAGE_PATH 变量, 跳过 proxychains 的安装"
-        return 1
-    fi
-
-    cd $PACKAGE_PATH
-    PACKAGE_NAME=proxychains-ng-master
-    if [ -f ${PACKAGE_NAME}.zip ];then
-        unzip ${PACKAGE_NAME}.zip
-        cd $PACKAGE_NAME
-        ./configure && make && make install
-        return $?
-    else
-        echo "没有发现 ${PACKAGE_NAME}.zip 文件"
-        return 1
-    fi
+  proxychains_version=4.15
+  yum -y install gcc wget
+  tempdir=$(mktemp -d)
+  cd $tempdir
+  wget https://github.com/rofl0r/proxychains-ng/archive/refs/tags/v${proxychains_version}.tar.gz
+  tar xf v${proxychains_version}.tar.gz
+  cd proxychains-ng-${proxychains_version}
+  ./configure && make && make install
+  cp src/proxychains.conf /etc/
 }

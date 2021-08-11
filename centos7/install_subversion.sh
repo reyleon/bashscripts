@@ -1,5 +1,5 @@
-# please See https://subversion.apache.org/packages.html
-# please See http://opensource.wandisco.com/centos/7/
+# See https://subversion.apache.org/packages.html
+# See http://opensource.wandisco.com/centos/7/
 
 install_subversion() {
 
